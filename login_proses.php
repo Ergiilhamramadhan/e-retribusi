@@ -16,8 +16,10 @@ if ($data) {
     // Arahkan berdasarkan role
     if ($data['role'] == 'admin') {
         header("Location: admin/dashboard.php");
+        exit;
     } else if ($data['role'] == 'petugas') {
-        header("Location: petugas/dashboard.php");
+        header("Location: petugas/petugas.php"); // ✅ fix
+        exit;
     }
 } else {
     echo "Login gagal!";
